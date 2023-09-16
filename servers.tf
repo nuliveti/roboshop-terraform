@@ -5,7 +5,7 @@ data "aws_ami" "centos" {
   owners           = ["942390335892"]
   }
 output "ami" {
-  value       = data.aws/-ami.centos.image_id
+  value       = data.aws_ami.centos.image_id
 }
 
 
