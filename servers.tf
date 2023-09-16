@@ -4,9 +4,6 @@ data "aws_ami" "centos" {
   name_regex       = "centos-8-Devops-practice"
 }
 
-output "ami" {
-  value = data.aws_ami.centos.image_id
-}
 
 
 
@@ -19,9 +16,7 @@ resource "aws_instance" "frontend" {
   }
 } 
 
-output "frontend" {
-  value = aws_instance.frontend.public_ip
-}
+
 
 resource "aws_instance" "redis" {
   ami           = "ami-03265a0778a880afb"
